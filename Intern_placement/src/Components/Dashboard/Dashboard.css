@@ -1,0 +1,481 @@
+.dashboardContainer {
+  display: grid;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.upBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightgray;
+  padding: 10px;
+  height: 90px;
+  width: calc(100% - 200px);
+  position: fixed;
+  top: 0;
+  left: 200px;
+  z-index: 100;
+}
+
+.settingsPopup {
+  position: absolute;
+  top: 50px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  z-index: 200;
+  height: 150px;
+  margin-top: 30px;
+}
+
+.settingsPopup ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.settingsPopup li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.settingsPopup li:hover {
+  background-color: #f0f0f0;
+}
+
+.upBar p {
+  margin: 0;
+}
+
+.icons {
+  display: flex;
+  gap: 5px; /* Adjust space between icons */
+  align-items: center;
+  justify-content: flex-end;
+  padding-left: 1500px;
+}
+
+.icons svg {
+  cursor: pointer;
+  font-size: 20px; /* Adjust size of icons if needed */
+}
+
+.upBar b {
+  font-weight: bold;
+}
+
+.upBar input[type='text'] {
+  padding: 5px;
+  width: 150px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.sideBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: lightgrey;
+  padding: 10px;
+  height: 100vh;
+  width: 200px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  color: black;
+}
+
+.sideBar img {
+  width: 90px;
+  height: auto;
+  margin-bottom: 10px;
+  background-color: transparent;
+}
+
+.sideList {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: -30px;
+}
+
+.sideList li {
+  list-style: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sideList li:hover {
+  color: #b45151;
+}
+
+.sideList li svg {
+  margin-right: 20px;
+}
+
+.logoutProfile {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  width: 180px;
+  height: 180px;
+}
+
+.logoutProfile li {
+  color: black;
+}
+
+.mainContent {
+  display: flex;
+  margin-top: 60px;
+  width: 100%;
+}
+
+.contentArea {
+  margin-left: 200px;
+  padding: -20px;
+  width: calc(100% - 200px);
+}
+
+.adminForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 60%;
+}
+
+.adminForm label {
+  margin-bottom: 5px;
+}
+
+.adminForm input {
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.adminFormButtons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.adminFormButtons button {
+  width: 100px;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contentArea h3 {
+  color: brown;
+  text-decoration: underline;
+  text-decoration-color: brown;
+  text-decoration-thickness: 5px;
+  padding-top: 20px;
+}
+
+.formContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px 60px;
+  font-size: 14px;
+  width: 1000px;
+  height: 760px;
+}
+
+.formContainer label {
+  margin-bottom: 5px;
+}
+
+.formContainer input[type='text'],
+.formContainer input[type='email'] {
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* Define specific positions for labels and inputs */
+.formContainer .label1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.formContainer .input1 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+.formContainer .label2 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+.formContainer .input2 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+.formContainer .label3 {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+.formContainer .input3 {
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+}
+.formContainer .label4 {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+.formContainer .input4 {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+}
+.formContainer .label5 {
+  grid-column: 1 / 2;
+  grid-row: 5 / 6;
+}
+.formContainer .input5 {
+  grid-column: 1 / 2;
+  grid-row: 6 / 7;
+}
+.formContainer .label6 {
+  grid-column: 2 / 3;
+  grid-row: 5 / 6;
+}
+.formContainer .input6 {
+  grid-column: 2 / 3;
+  grid-row: 6 / 7;
+}
+.formContainer .label7 {
+  grid-column: 1 / 2;
+  grid-row: 7 / 8;
+}
+.formContainer .input7 {
+  grid-column: 1 / 2;
+  grid-row: 8 / 9;
+}
+.formContainer .label8 {
+  grid-column: 2 / 3;
+  grid-row: 7 / 8;
+}
+.formContainer .input8 {
+  grid-column: 2 / 3;
+  grid-row: 8 / 9;
+}
+.formContainer .uploadWidget {
+  grid-column: 1 / 2;
+  grid-row: 9 / 10;
+  margin-top: -370px;
+  margin-left: -180px;
+}
+
+/* Button row spanning both columns */
+.formContainer .buttonRow {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  grid-row: 9 / 10;
+  margin-top: -320px;
+  width: 100%;
+}
+
+.formContainer button {
+  width: 150px;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.darkBrownButton {
+  background-color: brown;
+  color: white;
+}
+
+.redButton {
+  background-color: red;
+  color: white;
+}
+
+.formContainer h3 {
+  margin-bottom: 10px;
+}
+
+/* Overlay with blur effect */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px); /* Apply blur effect */
+  z-index: 150;
+}
+
+/* Admin form container */
+.adminFormContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 200;
+  height: 80%;
+  width: 40%;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .dashboardContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .upBar {
+    width: 100%;
+    left: 0;
+  }
+
+  .sideBar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .sideBar img {
+    width: 70px;
+  }
+
+  .sideList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .sideList li {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .logoutProfile {
+    width: auto;
+    height: auto;
+    font-size: 14px;
+  }
+
+  .mainContent {
+    margin-top: 70px; /* Adjust margin for top bar */
+    width: 100%;
+  }
+
+  .contentArea {
+    margin-left: 0;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .formContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, auto);
+    width: 100%;
+    padding: 10px;
+  }
+
+  .formContainer .uploadWidget {
+    grid-column: 1 / -1;
+    margin-top: 20px;
+  }
+
+  .formContainer .buttonRow {
+    grid-column: 1 / -1;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .adminFormContainer {
+    width: 80%;
+    height: auto;
+  }
+}
+
+/* For phones */
+@media (max-width: 480px) {
+  .upBar {
+    padding: 5px;
+    height: 70px;
+    font-size: 14px;
+  }
+
+  .icons svg {
+    font-size: 18px;
+  }
+
+  .sideBar {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .sideList {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sideList li {
+    padding: 8px;
+  }
+
+  .logoutProfile {
+    width: 100%;
+    height: auto;
+    font-size: 14px;
+  }
+
+  .mainContent {
+    margin-top: 70px; /* Adjust margin for top bar */
+  }
+
+  .contentArea {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .formContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, auto);
+    width: 100%;
+    padding: 10px;
+  }
+
+  .formContainer .buttonRow {
+    grid-column: 1 / -1;
+    margin-top: 20px;
+  }
+
+  .adminFormContainer {
+    width: 90%;
+    height: auto;
+  }
+}
